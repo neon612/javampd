@@ -103,6 +103,20 @@ public interface ServerStatus {
      * @return true if playlist is random
      */
     boolean isRandom();
+    
+    /**
+     * Returns if the playlist is consuming
+     *
+     * @return true if playlist is set to consume
+     */
+    boolean isConsume();
+    
+    /**
+     * Returns if the playlist is in single mode
+     *
+     * @return true if playlist is single
+     */
+    boolean isSingle();
 
     /**
      * Returns if the database is currently updating
@@ -122,4 +136,5 @@ public interface ServerStatus {
      * Forces a server update
      */
     void forceUpdate();
+
 }

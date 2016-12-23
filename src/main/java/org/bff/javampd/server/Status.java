@@ -21,6 +21,14 @@ public enum Status {
      */
     RANDOM("random:"),
     /**
+     * is the song consuming (0 or 1)
+     */
+    CONSUME("consume:"),
+    /**
+     * is the song playing in single order (0 or 1)
+     */
+    SINGLE("single:"),
+    /**
      * the playlist version number (31-bit unsigned integer)
      */
     PLAYLIST("playlist:"),

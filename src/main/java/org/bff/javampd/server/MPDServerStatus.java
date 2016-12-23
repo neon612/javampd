@@ -162,6 +162,16 @@ public class MPDServerStatus implements ServerStatus {
     public boolean isRandom() {
         return "1".equals(getStatus(Status.RANDOM));
     }
+    
+    @Override
+	public boolean isConsume() {
+		return "1".equals(getStatus(Status.CONSUME));
+	}
+
+	@Override
+	public boolean isSingle() {
+		return "1".equals(getStatus(Status.SINGLE));
+	}
 
     @Override
     public boolean isDatabaseUpdating() {
@@ -192,4 +202,5 @@ public class MPDServerStatus implements ServerStatus {
             }
         }
     }
+
 }

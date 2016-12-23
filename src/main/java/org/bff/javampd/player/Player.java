@@ -160,7 +160,7 @@ public interface Player {
      * @param shouldRepeat should the player repeat the current song
      */
     void setRepeat(boolean shouldRepeat);
-
+    
     /**
      * Returns if the player is in random play mode.
      *
@@ -174,6 +174,34 @@ public interface Player {
      * @param shouldRandom should the player play in random mode
      */
     void setRandom(boolean shouldRandom);
+
+    /**
+     * Returns if the player is in consume play mode.
+     *
+     * @return true if the player is in consume mode false otherwise
+     */
+    boolean isConsume();
+
+    /**
+     * Sets the consume status of the player. So the songs will be removed when finished
+     *
+     * @param shouldConsume should the player play in consume mode
+     */
+    void setConsume(boolean shouldConsume);
+    
+    /**
+     * Returns if the player is in single mode.
+     *
+     * @return is the player in single mode
+     */
+    boolean isSingle();
+
+    /**
+     * Sets the single status of the player.
+     *
+     * @param shouldSingle should the player repeat the current song
+     */
+    void setSingle(boolean shouldSingle);
 
     /**
      * Plays the playlist in a random order.

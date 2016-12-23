@@ -241,6 +241,38 @@ public class MPDPlayer implements Player {
         }
         commandExecutor.sendCommand(playerProperties.getRandom(), random);
     }
+    
+    @Override
+    public boolean isConsume() {
+    	return serverStatus.isConsume();
+    }
+    
+    @Override
+    public void setConsume(boolean shouldConsume) {
+    	String consume;
+    	if (shouldConsume) {
+    		consume = "1";
+    	} else {
+    		consume = "0";
+    	}
+    	commandExecutor.sendCommand(playerProperties.getConsume(), consume);
+    }
+    
+    @Override
+    public boolean isSingle() {
+    	return serverStatus.isSingle();
+    }
+    
+    @Override
+    public void setSingle(boolean shouldSingle) {
+    	String single;
+    	if (shouldSingle) {
+    		single = "1";
+    	} else {
+    		single = "0";
+    	}
+    	commandExecutor.sendCommand(playerProperties.getSingle(), single);
+    }
 
     @Override
     public void randomizePlay() {

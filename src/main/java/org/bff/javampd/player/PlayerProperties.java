@@ -17,6 +17,8 @@ public class PlayerProperties extends MPDProperties {
         PREV("MPD_PLAYER_PREV"),
         REPEAT("MPD_PLAYER_REPEAT"),
         RANDOM("MPD_PLAYER_RANDOM"),
+        CONSUME("MPD_PLAYER_CONSUME"),
+        SINGLE("MPD_PLAYER_SINGLE"),
         SEEK("MPD_PLAYER_SEEK"),
         SEEKID("MPD_PLAYER_SEEK_ID"),
         STOP("MPD_PLAYER_STOP"),
@@ -69,6 +71,14 @@ public class PlayerProperties extends MPDProperties {
         return getPropertyString(Command.RANDOM.getKey());
     }
 
+	public String getConsume() {
+		return getPropertyString(Command.CONSUME.getKey());
+	}
+	
+	public String getSingle() {
+		return getPropertyString(Command.SINGLE.getKey());
+	}
+
     public String getSeek() {
         return getPropertyString(Command.SEEK.getKey());
     }
@@ -84,4 +94,5 @@ public class PlayerProperties extends MPDProperties {
     public String getSetVolume() {
         return getPropertyString(Command.SETVOL.getKey());
     }
+
 }
